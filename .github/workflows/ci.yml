@@ -27,6 +27,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Generate Prisma client
+        run: pnpm run db:generate
+
       - name: Run linting
         run: pnpm run test:lint
 
