@@ -1,7 +1,7 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
+import Link from "next/link";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Input} from "@/components/ui/input";
 
 export default function ResetPasswordPage() {
   return (
@@ -12,7 +12,7 @@ export default function ResetPasswordPage() {
             Hulkastorus
           </Link>
         </div>
-        
+
         <Card>
           <CardHeader className="text-center">
             <CardTitle>Reset your password</CardTitle>
@@ -23,12 +23,7 @@ export default function ResetPasswordPage() {
               <label htmlFor="password" className="text-sm font-medium">
                 New Password
               </label>
-              <Input
-                id="password"
-                type="password"
-                placeholder="Enter your new password"
-                required
-              />
+              <Input id="password" type="password" placeholder="Enter your new password" required />
             </div>
             <div className="space-y-2">
               <label htmlFor="confirmPassword" className="text-sm font-medium">
@@ -52,11 +47,11 @@ export default function ResetPasswordPage() {
             </div>
           </CardContent>
         </Card>
-        
+
         <footer className="mt-8 text-center text-sm text-muted-foreground">
           © 2025 Hulkastorus • Terms • Privacy
         </footer>
       </div>
     </div>
-  )
+  );
 }

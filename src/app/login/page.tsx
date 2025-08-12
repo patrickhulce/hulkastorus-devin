@@ -1,7 +1,7 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
+import Link from "next/link";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Input} from "@/components/ui/input";
 
 export default function LoginPage() {
   return (
@@ -12,7 +12,7 @@ export default function LoginPage() {
             Hulkastorus
           </Link>
         </div>
-        
+
         <Card>
           <CardHeader className="text-center">
             <CardTitle>Welcome back, beast.</CardTitle>
@@ -23,23 +23,13 @@ export default function LoginPage() {
               <label htmlFor="email" className="text-sm font-medium">
                 Email
               </label>
-              <Input
-                id="email"
-                type="email"
-                placeholder="Enter your email"
-                required
-              />
+              <Input id="email" type="email" placeholder="Enter your email" required />
             </div>
             <div className="space-y-2">
               <label htmlFor="password" className="text-sm font-medium">
                 Password
               </label>
-              <Input
-                id="password"
-                type="password"
-                placeholder="Enter your password"
-                required
-              />
+              <Input id="password" type="password" placeholder="Enter your password" required />
             </div>
             <Button className="w-full" size="lg">
               🦖 Log In
@@ -57,11 +47,11 @@ export default function LoginPage() {
             </div>
           </CardContent>
         </Card>
-        
+
         <footer className="mt-8 text-center text-sm text-muted-foreground">
           © 2025 Hulkastorus • Terms • Privacy
         </footer>
       </div>
     </div>
-  )
+  );
 }
