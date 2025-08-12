@@ -6,12 +6,12 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
 model User {
-  id                String   @id @default(cuid()) @db.VarChar(12)
+  id                String   @id @default(cuid())
   email             String   @unique
   password          String
   firstName         String   @map("first_name")
@@ -30,9 +30,9 @@ model User {
 }
 
 model Directory {
-  id                        String   @id @default(cuid()) @db.VarChar(12)
-  userId                    String   @map("user_id") @db.VarChar(12)
-  parentId                  String?  @map("parent_id") @db.VarChar(12)
+  id                        String   @id @default(cuid())
+  userId                    String   @map("user_id")
+  parentId                  String?  @map("parent_id")
   fullPath                  String   @map("full_path")
   defaultExpirationPolicy   String   @default("infinite") @map("default_expiration_policy")
   defaultPermissions        String   @default("private") @map("default_permissions")
@@ -49,9 +49,9 @@ model Directory {
 }
 
 model File {
-  id               String    @id @default(cuid()) @db.VarChar(12)
-  userId           String    @map("user_id") @db.VarChar(12)
-  directoryId      String    @map("directory_id") @db.VarChar(12)
+  id               String    @id @default(cuid())
+  userId           String    @map("user_id")
+  directoryId      String    @map("directory_id")
   status           String    @default("reserved")
   r2Locator        String?   @map("r2_locator")
   expirationPolicy String    @default("infinite") @map("expiration_policy")
@@ -72,8 +72,8 @@ model File {
 }
 
 model ApiKey {
-  id          String   @id @default(cuid()) @db.VarChar(12)
-  userId      String   @map("user_id") @db.VarChar(12)
+  id          String   @id @default(cuid())
+  userId      String   @map("user_id")
   label       String
   key         String   @unique
   permissions String   @default("read")
