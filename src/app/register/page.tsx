@@ -1,7 +1,7 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
+import Link from "next/link";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Input} from "@/components/ui/input";
 
 export default function RegisterPage() {
   return (
@@ -12,7 +12,7 @@ export default function RegisterPage() {
             Hulkastorus
           </Link>
         </div>
-        
+
         <Card>
           <CardHeader className="text-center">
             <CardTitle>Join the private beta.</CardTitle>
@@ -24,44 +24,26 @@ export default function RegisterPage() {
                 <label htmlFor="firstName" className="text-sm font-medium">
                   First Name
                 </label>
-                <Input
-                  id="firstName"
-                  placeholder="First name"
-                  required
-                />
+                <Input id="firstName" placeholder="First name" required />
               </div>
               <div className="space-y-2">
                 <label htmlFor="lastName" className="text-sm font-medium">
                   Last Name
                 </label>
-                <Input
-                  id="lastName"
-                  placeholder="Last name"
-                  required
-                />
+                <Input id="lastName" placeholder="Last name" required />
               </div>
             </div>
             <div className="space-y-2">
               <label htmlFor="email" className="text-sm font-medium">
                 Email
               </label>
-              <Input
-                id="email"
-                type="email"
-                placeholder="Enter your email"
-                required
-              />
+              <Input id="email" type="email" placeholder="Enter your email" required />
             </div>
             <div className="space-y-2">
               <label htmlFor="password" className="text-sm font-medium">
                 Password
               </label>
-              <Input
-                id="password"
-                type="password"
-                placeholder="Create a password"
-                required
-              />
+              <Input id="password" type="password" placeholder="Create a password" required />
             </div>
             <div className="space-y-2">
               <label htmlFor="confirmPassword" className="text-sm font-medium">
@@ -78,11 +60,7 @@ export default function RegisterPage() {
               <label htmlFor="inviteCode" className="text-sm font-medium">
                 Invite Code
               </label>
-              <Input
-                id="inviteCode"
-                placeholder="Enter your invite code"
-                required
-              />
+              <Input id="inviteCode" placeholder="Enter your invite code" required />
             </div>
             <Button className="w-full" size="lg">
               🦖 Create Account
@@ -95,11 +73,11 @@ export default function RegisterPage() {
             </div>
           </CardContent>
         </Card>
-        
+
         <footer className="mt-8 text-center text-sm text-muted-foreground">
           © 2025 Hulkastorus • Terms • Privacy
         </footer>
       </div>
     </div>
-  )
+  );
 }

@@ -1,11 +1,11 @@
-import { Navbar } from "@/components/navbar"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import {Navbar} from "@/components/navbar";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 
 export default function DocsPage() {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      
+
       <div className="flex">
         <aside className="w-64 border-r bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 min-h-screen">
           <div className="p-6">
@@ -33,7 +33,7 @@ export default function DocsPage() {
             </nav>
           </div>
         </aside>
-        
+
         <main className="flex-1 p-8">
           <div className="max-w-4xl">
             <div className="mb-8">
@@ -53,8 +53,8 @@ export default function DocsPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Documentation content will be implemented here. This includes installation instructions,
-                    authentication setup, and basic usage examples.
+                    Documentation content will be implemented here. This includes installation
+                    instructions, authentication setup, and basic usage examples.
                   </p>
                 </CardContent>
               </Card>
@@ -68,8 +68,8 @@ export default function DocsPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Detailed API endpoints documentation will be implemented here, including request/response
-                    examples and authentication requirements.
+                    Detailed API endpoints documentation will be implemented here, including
+                    request/response examples and authentication requirements.
                   </p>
                 </CardContent>
               </Card>
@@ -77,9 +77,7 @@ export default function DocsPage() {
               <Card>
                 <CardHeader>
                   <CardTitle>FAQ</CardTitle>
-                  <CardDescription>
-                    Frequently asked questions and troubleshooting
-                  </CardDescription>
+                  <CardDescription>Frequently asked questions and troubleshooting</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
@@ -93,5 +91,5 @@ export default function DocsPage() {
         </main>
       </div>
     </div>
-  )
+  );
 }

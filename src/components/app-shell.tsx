@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { cn } from "@/lib/utils"
+import Link from "next/link";
+import {usePathname} from "next/navigation";
+import {cn} from "@/lib/utils";
 
 const navigation = [
-  { name: "Dashboard", href: "/app/dashboard" },
-  { name: "File Manager", href: "/app/browse" },
-  { name: "Settings", href: "/app/settings" },
-]
+  {name: "Dashboard", href: "/app/dashboard"},
+  {name: "File Manager", href: "/app/browse"},
+  {name: "Settings", href: "/app/settings"},
+];
 
-export function AppShell({ children }: { children: React.ReactNode }) {
-  const pathname = usePathname()
+export function AppShell({children}: {children: React.ReactNode}) {
+  const pathname = usePathname();
 
   return (
     <div className="flex h-screen bg-background">
@@ -32,7 +32,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                     pathname.startsWith(item.href)
                       ? "bg-primary text-primary-foreground"
                       : "text-foreground hover:bg-accent hover:text-accent-foreground",
-                    "group flex items-center px-2 py-2 text-sm font-medium rounded-md"
+                    "group flex items-center px-2 py-2 text-sm font-medium rounded-md",
                   )}
                 >
                   {item.name}
@@ -43,9 +43,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         </div>
       </div>
       <div className="flex flex-col flex-1 overflow-hidden">
-        <main className="flex-1 relative overflow-y-auto focus:outline-none">
-          {children}
-        </main>
+        <main className="flex-1 relative overflow-y-auto focus:outline-none">{children}</main>
         <footer className="bg-background border-t px-4 py-2">
           <div className="text-center text-sm text-muted-foreground">
             © 2025 Hulkastorus • Privacy • Terms
@@ -53,5 +51,5 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         </footer>
       </div>
     </div>
-  )
+  );
 }

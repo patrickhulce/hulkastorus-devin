@@ -1,5 +1,5 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
 
 export default function DashboardPage() {
   return (
@@ -15,9 +15,7 @@ export default function DashboardPage() {
         <Card>
           <CardHeader>
             <CardTitle>Upload Files</CardTitle>
-            <CardDescription>
-              Drag and drop files here or click to browse
-            </CardDescription>
+            <CardDescription>Drag and drop files here or click to browse</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="border-2 border-dashed border-muted-foreground/25 rounded-lg p-12 text-center">
@@ -62,7 +60,7 @@ export default function DashboardPage() {
                     <span>0 GB / 10 GB</span>
                   </div>
                   <div className="w-full bg-muted rounded-full h-2 mt-1">
-                    <div className="bg-primary h-2 rounded-full" style={{ width: "0%" }}></div>
+                    <div className="bg-primary h-2 rounded-full" style={{width: "0%"}}></div>
                   </div>
                 </div>
                 <p className="text-sm text-muted-foreground">
@@ -74,5 +72,5 @@ export default function DashboardPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

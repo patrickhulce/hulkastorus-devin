@@ -1,25 +1,24 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Navbar } from "@/components/navbar"
+import Link from "next/link";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Navbar} from "@/components/navbar";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      
+
       <main className="container mx-auto px-4 py-16">
         <div className="text-center space-y-8">
           <div className="space-y-4">
             <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
-              Dev-Friendly Cloud Storage,{" "}
-              <span className="text-primary">Hulk-Strong</span>
+              Dev-Friendly Cloud Storage, <span className="text-primary">Hulk-Strong</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Instant public URLs & frictionless CLI / Python uploads - minus the SDK bloat.
             </p>
           </div>
-          
+
           <div className="flex gap-4 justify-center">
             <Button size="lg" asChild>
               <Link href="/register">Request an Invite</Link>
@@ -41,18 +40,16 @@ export default function Home() {
               </CardDescription>
             </CardContent>
           </Card>
-          
+
           <Card>
             <CardHeader>
               <CardTitle>↻ Keyless Auth Flow</CardTitle>
             </CardHeader>
             <CardContent>
-              <CardDescription>
-                Works with GitHub SSO / cloud IAM; zero keys in CI
-              </CardDescription>
+              <CardDescription>Works with GitHub SSO / cloud IAM; zero keys in CI</CardDescription>
             </CardContent>
           </Card>
-          
+
           <Card>
             <CardHeader>
               <CardTitle>📦 ML-Asset Ready</CardTitle>
@@ -86,5 +83,5 @@ export default function Home() {
         </div>
       </footer>
     </div>
-  )
+  );
 }
